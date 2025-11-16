@@ -1,29 +1,38 @@
+# utils.py
+"""Data models for Prompt Shield analysis outputs."""
+
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import Any, List, Literal
+from typing import Any, Dict, List, Literal, Tuple
 
-risk_level = Literal['low', 'medium', 'high']
+RiskLevel = Literal["low", "medium", "high"]
 
 
 @dataclass(frozen=True)
 class Finding:
+    """Represents a single risky observation discovered during analysis."""
+
     kind: str
-    severity: risk_level
+    severity: RiskLevel
     description: str
     snippet: str
-    span: tuple[int, int]
+    span: Tuple[int, int]
 
 
 @dataclass(frozen=True)
 class AnalysisResult:
+    """Aggregates the outcome of analysing a prompt for risky content."""
+
     prompt_length: int
     findings: List[Finding] = field(default_factory=list)
     total_risk_score: int = 0
-    risk_label: risk_level = 'low'
-    metadata: dict[str, Any] = field(default_factory=dict)
+    risk_label: RiskLevel = 'low'
+    metadata: Dict[str, Any] = field(default_factory=dict)
 
-    def to_dict(self) -> dict[str, Any]:
+    def to_dict(self) -> Dict[str, Any]:
+        """Serialise the analysis result to a JSON-friendly dictionary."""
+
         return {
             'prompt_length': self.prompt_length,
             'findings': [
@@ -33,7 +42,8 @@ class AnalysisResult:
                     'description': finding.description,
                     'snippet': finding.snippet,
                     'span': finding.span,
-                } for finding in self.findings
+                }
+                for finding in self.findings
             ],
             'total_risk_score': self.total_risk_score,
             'risk_label': self.risk_label,
