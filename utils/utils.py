@@ -1,4 +1,3 @@
-# utils.py
 """Data models for Prompt Shield analysis outputs."""
 
 from __future__ import annotations
@@ -6,7 +5,7 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from typing import Any, Dict, List, Literal, Tuple
 
-RiskLevel = Literal["low", "medium", "high"]
+RiskLevel = Literal['low', 'medium', 'high']
 
 
 @dataclass(frozen=True)

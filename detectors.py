@@ -39,7 +39,8 @@ def find_pii_matches(text: str) -> List[Tuple[str, str, Tuple[int, int]]]:
 
 
 def find_term_matches(
-    text: str, terms: Sequence[str]
+    text: str,
+    terms: Sequence[str]
 ) -> List[Tuple[str, Tuple[int, int]]]:
     """
     Locate each occurrence of the provided terms within the text.
