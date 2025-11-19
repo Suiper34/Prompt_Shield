@@ -1,4 +1,8 @@
-from main import main
+from __future__ import annotations
 
-if __name__ == '__main__':
-    main()
+from .main import main
+from .analyser import PromptAnalyser
+from .config.config import PromptShieldConfig
+
+__all__ = ['PromptAnalyser', 'PromptShieldConfig', 'main']
+__version__ = '1.0.0'
