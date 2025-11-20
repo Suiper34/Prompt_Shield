@@ -1,0 +1,24 @@
+[build-system]
+requires = ['setuptools>=64', 'wheel']
+build-backend = 'setuptools.build_meta'
+
+[project]
+name = 'Prompt_Shield'
+version = '1.0.0'
+description = 'CLI-first prompt risk linter for responsible AI teams.'
+readme = 'README.md'
+keywords = ['ai', 'prompt-engineering', 'governance', 'security', 'compliance']
+license = ['LICENSE']
+author = [{name = 'Theophilus Asamoah Gyapong', email = 'jhapson34@gmail.com'}]
+requires-python = '>=3.10'
+
+[project.urls]
+Homepage = 'https://github.com/Suiper34/Prompt_Shield'
+Issues = 'https://github.com/Suiper34/Prompt_Shield/issues'
+
+[projects.scripts]
+Prompt_Shield = 'Prompt_Shield.cli.cli:run_cli'
+
+[tool.pytest.ini_options]
+pythonpath = ['.']
+addopts = '-q'
