@@ -26,8 +26,8 @@ Prompt Shield is a CLI-first prompt risk linter designed to intercept sensitive 
 
 ## Project Structure 📁
 
-        ```
-        Prompt_Shield/
+    ```
+    Prompt_Shield/
         ├── cli/
         │   └── __init__.py
         |   ├── cli.py
@@ -47,10 +47,12 @@ Prompt Shield is a CLI-first prompt risk linter designed to intercept sensitive 
         ├── main.py
         ├── pyproject.toml
         └── README.md
-        ```
+    ```
 ---
 
 ## Installation 🛠️
+
+- **How to install**:
 
         ```bash
         git clone https://github.com/Suiper34/Prompt_Shield.git
