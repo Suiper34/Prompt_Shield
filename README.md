@@ -26,40 +26,40 @@ Prompt Shield is a CLI-first prompt risk linter designed to intercept sensitive 
 
 ## Project Structure 📁
 
-    ```
-     Prompt_Shield/
-     ├── cli/
-     │   └── __init__.py
-     |   ├── cli.py
-     ├── utils/
-     │   └── __init__.py
-     |   ├── utils.py
-     ├── config/
-     │   └── __init__.py
-     |   ├── config.py
-     ├── tests/
-     │   └── test_analyser.py
-     ├── .env
-     ├── __init__.py
-     ├── __main__.py
-     ├── analyser.py
-     ├── detectors.py
-     ├── main.py
-     ├── pyproject.toml
-     └── README.md
-    ```
+        ```
+        Prompt_Shield/
+        ├── cli/
+        │   └── __init__.py
+        |   ├── cli.py
+        ├── utils/
+        │   └── __init__.py
+        |   ├── utils.py
+        ├── config/
+        │   └── __init__.py
+        |   ├── config.py
+        ├── tests/
+        │   └── test_analyser.py
+        ├── .env
+        ├── __init__.py
+        ├── __main__.py
+        ├── analyser.py
+        ├── detectors.py
+        ├── main.py
+        ├── pyproject.toml
+        └── README.md
+        ```
 ---
 
 ## Installation 🛠️
 
-    ```bash
-     git clone https://github.com/Suiper34/Prompt_Shield.git
-     cd Prompt_Shield
-     python -m venv .venv
-     .venv\Scripts\activate        # On Mac/Linux use: source .venv/bin/activate
-     pip install --upgrade pip
-     pip install -e .
-    ```
+        ```bash
+        git clone https://github.com/Suiper34/Prompt_Shield.git
+        cd Prompt_Shield
+        python -m venv .venv
+        .venv\Scripts\activate        # On Mac/Linux use: source .venv/bin/activate
+        pip install --upgrade pip
+        pip install -e .
+        ```
 
 ---
 
@@ -113,9 +113,9 @@ Prompt Shield reads its settings from environment variables (with sensible defau
 
 Run the automated test suite with:
 
-    ```bash
-    pytest -q
-    ```
+        ```bash
+        pytest -q
+        ```
 ---
 
 ## Deployment 🚀
